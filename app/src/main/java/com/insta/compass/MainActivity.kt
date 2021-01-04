@@ -1,4 +1,4 @@
-package com.insta.compas
+package com.insta.compass
 
 import android.content.Context
 import android.hardware.Sensor
@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.Toast
@@ -19,27 +18,26 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     private var manager: SensorManager? = null
     private var currentDegree: Int = 0
+    //private lateinit var binding: ResultProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(findViewById(R.id.toolbar))
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(R.string.app_name)
-        supportActionBar?.subtitle = "North, South, West, East"
-        supportActionBar?.setDisplayUseLogoEnabled(true)
+        //binding = ResultProfileBinding.inflate(layoutInflater)
+        //val view = binding.root
+        //setContentView(view)
+
+        getToolbar()
 
         manager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-
     }
 
     override fun onResume() {
         super.onResume()
         manager?.registerListener(
             this,
-            manager?.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+            manager?.getDefaultSensor(Sensor.TYPE_ALL),
             SensorManager.SENSOR_DELAY_GAME
         )
 
@@ -71,6 +69,15 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
 
+    }
+
+    private fun getToolbar() {
+        setSupportActionBar(findViewById(R.id.toolbar))
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(R.string.app_name)
+        supportActionBar?.subtitle = "North, South, West, East"
+        supportActionBar?.setDisplayUseLogoEnabled(true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
