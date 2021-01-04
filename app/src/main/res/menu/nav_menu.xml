@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_baseline_compass_calibration_24"
+        app:showAsAction="never"
+        android:title="Compass Points">
+    </item>
+
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        app:showAsAction="never"
+        android:title="Add">
+    </item>
+
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:showAsAction="never"
+        android:title="Search">
+    </item>
+
+
+</menu>

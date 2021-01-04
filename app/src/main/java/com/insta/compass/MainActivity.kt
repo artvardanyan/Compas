@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
@@ -91,8 +92,17 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                 finish()
                 startActivity(intent)
             }
-            R.id.about ->
-                Toast.makeText(this, "Compass", Toast.LENGTH_LONG).show();
+            R.id.about -> {
+
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("About")
+                builder.setMessage(R.string.compass)
+                builder.setIcon(android.R.drawable.ic_dialog_alert)
+                builder.setPositiveButton("OK") { _, _ ->
+
+                }
+                builder.show()
+            }
             R.id.exit ->
                 finish()
         }
