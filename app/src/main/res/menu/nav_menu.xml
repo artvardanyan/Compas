@@ -6,23 +6,23 @@
 
     <item
         android:id="@+id/about"
-        android:icon="@drawable/ic_baseline_compass_calibration_24"
+        android:icon="@drawable/ic_baseline_wb_sunny_24"
         app:showAsAction="never"
-        android:title="Compass Points">
+        android:title="Azimuth Sun">
     </item>
 
     <item
         android:id="@+id/add"
-        android:icon="@drawable/ic_baseline_add_circle_24"
+        android:icon="@drawable/ic_baseline_dark_mode_24"
         app:showAsAction="never"
-        android:title="Add">
+        android:title="Azimuth moon">
     </item>
 
     <item
         android:id="@+id/exit"
-        android:icon="@drawable/ic_baseline_search_24"
+        android:icon="@drawable/ic_baseline_help_24"
         app:showAsAction="never"
-        android:title="Search">
+        android:title="Help">
     </item>
 
 
