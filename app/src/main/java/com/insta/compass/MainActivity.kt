@@ -11,7 +11,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,15 +18,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     private var manager: SensorManager? = null
     private var currentDegree: Int = 0
-    //private lateinit var binding: ResultProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        //binding = ResultProfileBinding.inflate(layoutInflater)
-        //val view = binding.root
-        //setContentView(view)
 
         getToolbar()
 
@@ -38,7 +32,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         super.onResume()
         manager?.registerListener(
             this,
-            manager?.getDefaultSensor(Sensor.TYPE_ALL),
+            manager?.getDefaultSensor(Sensor.TYPE_ORIENTATION),
             SensorManager.SENSOR_DELAY_GAME
         )
 

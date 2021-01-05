@@ -5,18 +5,26 @@
 
 
     <item
-        android:id="@+id/about"
+        android:id="@+id/azimuthSun"
         android:icon="@drawable/ic_baseline_wb_sunny_24"
         app:showAsAction="never"
         android:title="Azimuth Sun">
     </item>
 
     <item
-        android:id="@+id/add"
+        android:id="@+id/azimuthMoon"
         android:icon="@drawable/ic_baseline_dark_mode_24"
         app:showAsAction="never"
         android:title="Azimuth moon">
     </item>
+
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/ic_baseline_map_24"
+        app:showAsAction="never"
+        android:title="Map">
+    </item>
+
 
     <item
         android:id="@+id/exit"
